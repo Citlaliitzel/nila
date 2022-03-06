@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://i.gifer.com/2A64.gif");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#main-container {
+    margin: 150px auto;
+	width: 600px;
+}
+
+table{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td{
+	padding: 20px;
+}
+
+thead{
+	background-color: lightblue;
+	border-bottom: solid 5px pink;
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: white;
+}
+
+tr:hover td{
+	background-color: lightseagreen;
+	color: white;
+}
+
+@media screen and (max-width: 800px) {
+	table {
+		width:100%;
+	}
+	thead {
+		display: none;
+	}
+	tr:nth-of-type(2n) {
+		background-color: inherit;
+	}
+	tr td:first-child {
+		background: pink;
+		font-weight:bold;
+		font-size:1.3em;
+	}
+	tbody td {
+		display: block;
+		text-align:center;
+	}
+	tbody td:before {
+		content: attr(data-th);
+		display: block;
+		text-align:center;
+	}
+}
