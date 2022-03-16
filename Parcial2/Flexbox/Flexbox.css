@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: fantasy;
+ }
+
+.contenedorflex{
+    width: 100vw;
+    height: 100vh;
+    background-color: pink;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cajaflex{
+    background-color: rgb(60, 168, 240);
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
