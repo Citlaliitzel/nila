@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: fantasy;
+}
+
+.contenedor {
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+    display: grid;
+    text-align: center;
+    border: 1px solid white;
+    grid-template-columns: 30% 35% 35%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 'barr sec1 sec2' 
+                        'barr sec3 sec4';
+    }
+
+    #barralat { 
+        grid-area: barralat;}
+
+    #seccion1 { 
+        grid-area: seccion1;}
+
+    #seccion2  { 
+        grid-area: seccion2;}
+
+    #seccion3 { 
+        grid-area: seccion3;}
+
+    #seccion4 { 
+        grid-area: seccion4;}
+
+#barralat { grid-area: barr; background-color: pink;}
+#seccion1 { grid-area: sec1; background-color: aquamarine;}
+#seccion2 { grid-area: sec2; background-color: blueviolet;}
+#seccion3 { grid-area: sec3; background-color: blue;}
+#seccion4 { grid-area: sec4; background-color: purple;}
