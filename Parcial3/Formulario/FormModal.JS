@@ -9,8 +9,8 @@ $(document).ready(function() {
         $('#ventanaAlerta').hide();
     });
 
-    $('#botonModalJS').click(function() {
-        $('.modal-body').text("Se disparo desde el boton Js")
+    $('#botonModalJs').click(function() {
+        // $('.modal-body').text("Se disparo desde el boton Js");
         $('#ventanaModal').modal();
     });
 
