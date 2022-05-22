@@ -22,19 +22,16 @@ $(document).ready(function() {
         });
     });
 
-    function pedirHeader() {
+    $('#botonAjax').click(function() {
         var solicitud = new XMLHttpRequest();
-
-        solicitud.onreadystatechange = function() {
-
-            if (solicitud.readyState == 4 && solicitud.status == 200) {
-                document.getElementById("MyDiv").innerHTML = solicitud.responseText;
+            
+            solicitud.onreadystatechange = function() {
+            
+                if (solicitud.readyState == 4 && solicitud.status == 200) {
+                    document.getElementById("header").innerHTML = solicitud.responseText;
             }};
-
-            solicitud.open("GET", "01_cargarArchivo.txt", true);
+            
+            solicitud.open("GET", "Formulario.txt", true);
             solicitud.send();
-            }
-            function iniciarHeader() {
-                document.getElementById("MyDiv").innerHTML = "<h2>Este es un Header nivel 2<h2>";
-            }
+        });
     });
