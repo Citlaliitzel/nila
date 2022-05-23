@@ -17,7 +17,7 @@ try {
 $con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 try {
-    $consultaSql = "select ID, nombre, nacionalidad from musica where id=".$id;
+    $consultaSql = "select idCliente, nomCliente, dirCliente, nomPaciente, razaPaciente, pesoPaciente, tamPaciente, colPaciente, nacionalidad from cliente where id=".$id;
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
     $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
