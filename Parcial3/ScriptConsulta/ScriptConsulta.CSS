@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("https://i.pinimg.com/564x/05/65/d5/0565d50dc401456d619c5875b96ab30c.jpg");
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
