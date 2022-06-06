@@ -24,7 +24,7 @@ try {
 }
 
 try{
-    $consultaSql = "update cliente set NombreCliente = '$nomCliente', DireccionCliente = '$dirCliente', NombrePaciente = '$nomPaciente', RazaPaciente = '$razaPaciente', PesoPaciente = '$pesoPaciente', TamañoPaciente = '$tamPaciente', ColorPaciente = '$colPaciente' where idCliente = $idCliente";
+    $consultaSql = "update cliente set NombreCliente = '$nomCliente', DireccionCliente = '$dirCliente', NombrePaciente = '$nomPaciente', RazaPaciente = '$razaPaciente', PesoPaciente = '$pesoPaciente', TamañoPaciente = '$tamPaciente', ColorPaciente = '$colPaciente' where idCliente = $idCliente;";
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
     $consulta -> closeCursor();
