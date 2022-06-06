@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('#botonConsultar').click(function() {
-        $('#M1').modal({backdrop: 'static', keyboard: false});
+        $('#modal1').modal({backdrop: 'static', keyboard: false});
     });
 
     $('#botonConsultar2').click(function() {
@@ -8,7 +8,7 @@ $(document).ready(function() {
         $.post('/PHP/Consultar.php',{id:ID},function(data){
             refrescar(data);
         },'json');
-        $('#M1').modal('hide');
+        $('#modal1').modal('hide');
     });
 
     $('#botonRegistrar').click(function() {
@@ -69,7 +69,7 @@ $(document).ready(function() {
     });
 
     $('#botonEliminar').click(function() {
-        let ID = $('#idDes').val();
+        let idCliente = $('#idCliente').val();
         swal({
             title: "¿Eliminar?",
             text: "¿Desea eliminarlo?,",
