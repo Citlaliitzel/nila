@@ -30,7 +30,7 @@ $(document).ready(function() {
             })
             .then((willDelete) => {
             if (willDelete) {
-                $.post('./PHP/Registrar.php',{idCliente, nomCliente, dirCliente, nomPaciente, razaPaciente, pesoPaciente, tamPaciente, colPaciente});
+                $.post('PHP/Registrar.php',{idCliente, nomCliente, dirCliente, nomPaciente, razaPaciente, pesoPaciente, tamPaciente, colPaciente});
                 swal("Se ha registrado", {
                 icon: "success"
                 });
@@ -59,7 +59,7 @@ $(document).ready(function() {
             })
             .then((willDelete) => {
             if (willDelete) {
-                $.post('./PHP/Modificar.php',{idCliente, nomCliente, dirCliente, nomPaciente, razaPaciente, pesoPaciente, tamPaciente, colPaciente:idCliente});
+                $.post('PHP/Modificar.php',{idCliente, nomCliente, dirCliente, nomPaciente, razaPaciente, pesoPaciente, tamPaciente, colPaciente:idCliente});
                 swal("Se ha modificado", {
                 icon: "success"
                 });
@@ -70,7 +70,7 @@ $(document).ready(function() {
     });
 
     $('#botonEliminar').click(function() {
-        let idCliente = $('#idCliente').val();
+        let idCliente = $('#id').val();
         swal({
             title: "¿Eliminar?",
             text: "¿Desea eliminarlo?,",
@@ -80,7 +80,7 @@ $(document).ready(function() {
             })
             .then((willDelete) => {
             if (willDelete) {
-                $.post('./Php/Eliminar.php',{id:idCliente});
+                $.post('Php/Eliminar.php',{id:idCliente});
                 swal("La información se elimino", {
                 icon: "success"
                 });
