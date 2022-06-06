@@ -6,7 +6,7 @@ $(document).ready(function() {
     $('#botonConsultar2').click(function() {
         let ID = document.querySelector('#idClienteModal').value;
         console.log(ID)
-        $.post('PHP/Consultar.php',{id:ID},function(data){ /*Cambie la ruta porque solo es necesario poner el nombre de carpeta y luego ya el archivo */
+        $.post('./PHP/Consultar.php',{id:ID},function(data){ /*Cambie la ruta porque solo es necesario poner el nombre de carpeta y luego ya el archivo */
             refrescar(data);
         },'json');
         $('#modal1').modal('hide');
