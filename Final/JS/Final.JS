@@ -70,7 +70,7 @@ $(document).ready(function() {
     });
 
     $('#botonEliminar').click(function() {
-        let idCliente = $('#id').val();
+        let idCliente = $('#idCliente').val();
         swal({
             title: "¿Eliminar?",
             text: "¿Desea eliminarlo?,",
