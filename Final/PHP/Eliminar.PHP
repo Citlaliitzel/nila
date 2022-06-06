@@ -1,6 +1,6 @@
 <?php
 
-$idCliente=$_POST['id'];
+$idCliente=$_POST['idCliente'];
 
 $hostname='localhost';
 $database='n19100226';
