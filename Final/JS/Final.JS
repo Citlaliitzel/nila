@@ -4,8 +4,9 @@ $(document).ready(function() {
     });
 
     $('#botonConsultar2').click(function() {
-        let ID = $('#idCliente').val();
-        $.post('/PHP/Consultar.php',{id:ID},function(data){
+        let ID = document.querySelector('#idClienteModal').value;
+        console.log(ID)
+        $.post('PHP/Consultar.php',{id:ID},function(data){ /*Cambie la ruta porque solo es necesario poner el nombre de carpeta y luego ya el archivo */
             refrescar(data);
         },'json');
         $('#modal1').modal('hide');
@@ -92,13 +93,13 @@ $(document).ready(function() {
 
 
     function refrescar(objeto) {
-        $('#idCliente').val(data.idCliente);
-        $('#nomCliente').val(data.nomCliente);
-        $('#dirCliente').val(data.dirCliente);
-        $('#nomPaciente').val(data.nomPaciente);
-        $('#razaPaciente').val(data.razaPaciente);
-        $('#pesoPaciente').val(data.pesoPaciente);
-        $('#tamPaciente').val(data.tamPaciente);
-        $('#colPaciente').val(data.colPaciente);
+        $('#idCliente').val(objeto.idCliente);
+        $('#nomCliente').val(objeto.nomCliente);
+        $('#dirCliente').val(objeto.dirCliente);
+        $('#nomPaciente').val(objeto.nomPaciente);
+        $('#razaPaciente').val(objeto.razaPaciente);
+        $('#pesoPaciente').val(objeto.pesoPaciente);
+        $('#tamPaciente').val(objeto.tamPaciente);
+        $('#colPaciente').val(objeto.colPaciente);
     }
 });
