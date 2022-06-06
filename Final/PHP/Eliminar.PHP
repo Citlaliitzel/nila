@@ -1,6 +1,6 @@
 <?php
 
-$idCliente=$_POST['idCliente'];
+$idCliente=$_POST['id'];
 
 $hostname='localhost';
 $database='n19100226';
@@ -16,7 +16,7 @@ try {
 }
 
 try{
-    $consultaSql = "delete from cliente where idCliente = $idCliente";
+    $consultaSql = "delete from cliente where idCliente = $idCliente;";
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
     $consulta -> closeCursor();
