@@ -70,7 +70,7 @@ $(document).ready(function() {
     });
 
     $('#botonEliminar').click(function() {
-        let id = $('#idCliente').val();
+        let idCliente = $('#idCliente').val();
         swal({
             title: "¿Eliminar?",
             text: "¿Desea eliminarlo?,",
@@ -80,7 +80,7 @@ $(document).ready(function() {
             })
             .then((willDelete) => {
             if (willDelete) {
-                $.post('Php/Eliminar.php',{idCliente:id});
+                $.post('Php/Eliminar.php',{id:idCliente});
                 swal("La información se elimino", {
                 icon: "success"
                 });

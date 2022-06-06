@@ -26,4 +26,6 @@ try{
     echo $e->getMessage();
 }
 
+    echo $consultaSql;
+
 ?>
