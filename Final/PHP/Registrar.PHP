@@ -35,5 +35,5 @@ try{
     echo "Error de consulta a la base de datos";
     echo $e->getMessage();
 }
-
+    echo $consultaSql;
 ?>
