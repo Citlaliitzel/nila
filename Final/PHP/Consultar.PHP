@@ -5,7 +5,7 @@ $idCliente=$_POST['id']; /*Verifica bien el nombre de la variable que le mandas 
 $hostname='localhost';
 $database='n19100226';
 $username='root';
-$password='';
+$password='Nila226';
 
 try {
     $con = new PDO("mysql:host=$hostname;dbname=$database",$username,$password);
