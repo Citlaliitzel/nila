@@ -15,7 +15,7 @@ try {
     exit();
 }
 try {
-    $consultaSql = "select nomCliente, dirCliente, nomPaciente, razaPaciente, pesoPaciente, tamPaciente, colPaciente from cliente where idCliente=".$idCliente;
+    $consultaSql = "select nomCliente, dirCliente, nomPaciente, razaPaciente, pesoPaciente, tamPaciente, colPaciente from cliente where id=".$idCliente;
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
     $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
