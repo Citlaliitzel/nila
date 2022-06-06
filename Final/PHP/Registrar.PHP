@@ -26,7 +26,7 @@ try{
     $consultaSql = "insert into cliente (idCliente, nomCliente, dirCliente, nomPaciente, razaPaciente, pesoPaciente, tamPaciente, colPaciente)
     values ('$idCliente', '$nomCliente', '$dirCliente', '$nomPaciente', '$razaPaciente', '$pesoPaciente', '$tamPaciente', '$colPaciente');";
 
-    //$consultaSql = "CALL CLIENTE('$idCliente','$nomCliente','$dirCliente','$nomPaciente','$razaPaciente', '$pesoPaciente','$tamPaciente','$colPaciente')";
+
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
     $consulta -> closeCursor();
