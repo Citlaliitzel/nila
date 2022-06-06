@@ -16,7 +16,7 @@ try {
 }
 
 try{
-    $consultaSql = "delete from cliente where id = $idCliente";
+    $consultaSql = "delete from cliente where idCliente = $idCliente";
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
     $consulta -> closeCursor();
